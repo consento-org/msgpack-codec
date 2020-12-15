@@ -1,6 +1,6 @@
 # msgpack-codec
 
-`msgpack-codec` is a [`codecs`][codecs] compatible adapter to [msgpack][msgpack]
+`msgpack-codec` is a [codecs][codecs] compatible adapter to [msgpack][msgpack]
 
 [codecs]: (https://github.com/mafintosh/codecs)
 [msgpack]: https://github.com/msgpack/msgpack-javascript

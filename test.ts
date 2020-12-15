@@ -1,4 +1,4 @@
-/* eslint:ignore @typescript-eslint/no-floating-promises */
+/* eslint-disable @typescript-eslint/no-floating-promises */
 import { test } from 'zora'
 import codec from '.'
 
