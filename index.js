@@ -1,4 +1,4 @@
-const { encode, decode } = require('@msgpack/msgpack')
+const { encode, decode, Decoder, Encoder, ExtData, ExtensionCodec } = require('@msgpack/msgpack')
 
 module.exports = {
   name: 'msgpack',
@@ -6,5 +6,9 @@ module.exports = {
   encode (obj, options) {
     const arr = encode(obj, options)
     return Buffer.from(arr.buffer, arr.byteOffset, arr.byteLength)
-  }
+  },
+  Encoder,
+  Decoder,
+  ExtensionCodec,
+  ExtData
 }

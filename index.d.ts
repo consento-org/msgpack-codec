@@ -9,13 +9,13 @@ declare namespace msgpack {
   interface MsgPackCodec <Name extends string = 'msgpack'> extends NamedCodec<Name, input[0], output> {
     encode: (input: input[0], options?: input[1]) => Buffer
     decode: (input: Buffer, options?: Parameters<typeof msg.decode>[1]) => output
+    Encoder: typeof msg.Encoder
+    Decoder: typeof msg.Decoder
+    ExtData: typeof msg.ExtData
+    ExtensionCodec: typeof msg.ExtensionCodec
   }
-  type Decoder <ContextType> = msg.Decoder<ContextType>
   type DecodeOptions <ContextType = undefined> = msg.DecodeOptions<ContextType>
-  type Encoder <ContextType> = msg.Encoder<ContextType>
   type EncodeOptions <ContextType = undefined> = msg.EncodeOptions<ContextType>
-  type ExtData = msg.ExtData
-  type ExtensionCodec <ContextType> = msg.ExtensionCodec<ContextType>
 }
 
 declare const msgpack: msgpack.MsgPackCodec
