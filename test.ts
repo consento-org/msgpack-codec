@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-floating-promises */
 import { test } from 'zora'
-import msgpack, { MsgPackCodec } from '.'
+import msgpack from '.'
 
 test('basics', t => {
-  const codec: MsgPackCodec = msgpack
+  const codec: msgpack.MsgPackCodec = msgpack
   t.equals(codec.name, 'msgpack', 'correct name')
   const input = { hello: 'world', data: Buffer.from('hello world') }
   const any = codec.encode(input)
